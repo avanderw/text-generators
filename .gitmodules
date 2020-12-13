@@ -1,0 +1,3 @@
+[submodule "src/main/java/net/avdw/discord"]
+	path = src/main/java/net/avdw/discord
+	url = https://github.com/avanderw/net.avdw.discord
