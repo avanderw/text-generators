@@ -1,0 +1,35 @@
+package net.avdw.text.generators.{{type}};
+
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Model.CommandSpec;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Spec;
+
+import javax.annotation.processing.Generated;
+import javax.script.Bindings;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+@Generated(date = "{{date}}", value= "{{generator}}", comments = "version = {{version}}")
+@Command(name = "{{name}}", mixinStandardHelpOptions = true)
+public class {{nameCamel}}Cli implements Runnable {
+    @Spec private CommandSpec spec;
+
+    @Option(names = "--count") private int count = 10;
+
+    @Override
+    public void run() {
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+        engine.getContext().setWriter(spec.commandLine().getOut());
+        Bindings bindings = engine.createBindings();
+        bindings.put("count", count);
+        try {
+            engine.eval(new FileReader("src/main/resources/scripts/{{type}}/{{name}}.js"), bindings);
+        } catch (ScriptException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}

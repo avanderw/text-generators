@@ -1,0 +1,18 @@
+package net.avdw.text.generators;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import javax.annotation.processing.Generated;
+
+@Generated(date = "{{date}}", value= "{{generator}}", comments = "{{version}}")
+public class {{typeCamel}}GeneratorTest {
+    private static CliTester cliTester;
+
+    @BeforeClass
+    public static void beforeClass() {
+        cliTester = new CliTester(MainCli.class, new TestGuiceFactory(new TestModule()));
+    }
+
+{{methods}}
+}

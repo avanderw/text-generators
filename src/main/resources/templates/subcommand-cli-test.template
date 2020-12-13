@@ -1,0 +1,4 @@
+    @Test
+    public void test{{nameCamel}}() {
+        cliTester.execute("{{name}}").success();
+    }
