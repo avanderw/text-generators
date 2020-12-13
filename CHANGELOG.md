@@ -10,6 +10,7 @@ See [README](README.md) for more project related information.
 *Released on 2020-12-13*
 
 ### Added
+- Add CLI submodule
 - Add 'swamp' place generator
 - Add 'space-colony' place generator
 - Add 'sky-island' place generator
