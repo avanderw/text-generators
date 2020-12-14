@@ -43,6 +43,11 @@ class MainModule extends AbstractModule {
         reflections = new Reflections("net.avdw.text.generators.place");
         reflections.getTypesAnnotatedWith(CommandLine.Command.class).forEach(place::addSubcommand);
 
+        CommandLine real = new CommandLine(RealCli.class, factory);
+        commandLine.addSubcommand(real);
+        reflections = new Reflections("net.avdw.text.generators.real");
+        reflections.getTypesAnnotatedWith(CommandLine.Command.class).forEach(real::addSubcommand);
+
         return commandLine;
     }
 }

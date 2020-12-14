@@ -37,6 +37,9 @@ public class SubCommandCliGenerator {
 
             @Override
             public FileVisitResult postVisitDirectory(final Path dir, final IOException exc) throws IOException {
+                if (type.equals("utility")) {
+                    return FileVisitResult.CONTINUE;
+                }
                 String typeTest = typeTestTemplate
                         .replace("{{date}}", date)
                         .replace("{{generator}}", SubCommandCliGenerator.class.getCanonicalName())
