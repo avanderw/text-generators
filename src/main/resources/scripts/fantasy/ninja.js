@@ -3,16 +3,16 @@ var names2 = ["Angel", "Assassin", "Avalanche", "Basilisk", "Beast", "Blaze", "B
 var names3 = ["Black", "Blood", "Bullet", "Crimson", "Dark", "Dead", "Death", "Dream", "Ghost", "Golden", "Hollow", "Iron", "Jade", "Kill", "Lethal", "Light", "Lightning", "Phantom", "Quick", "Rabid", "Rapid", "Red", "Scarlet", "Silent", "Silver", "Snow", "Steel", "Still", "Swift", "Thunder"];
 var names4 = ["bang", "bash", "beat", "blade", "claw", "crash", "eye", "eyes", "fall", "flake", "flash", "flow", "kill", "lock", "mark", "moon", "saw", "scar", "shade", "shadow", "shiv", "shot", "sign", "slinger", "stain", "strike", "streak", "strikes", "stroke", "tooth"];
 var names5 = ["Bang", "Bash", "Beat", "Blade", "Claw", "Crash", "Eye", "Eyes", "Fall", "Flake", "Flash", "Flow", "Kill", "Lock", "Mark", "Moon", "Saw", "Scar", "Shade", "Shadow", "Shiv", "Shot", "Sign", "Slinger", "Stain", "Strike", "Streak", "Strikes", "Stroke", "Tooth"];
-var br = "";
+
 function nameGen() {
     for (i = 0; i < count; i++) {
-        if (i < 5) {
+        if (i < count * .5) {
             rnd = Math.floor(Math.random() * names1.length);
             rnd2 = Math.floor(Math.random() * names2.length);
             names = "The " + names1[rnd] + " " + names2[rnd2];
         } else {
             rnd = Math.floor(Math.random() * names3.length);
-            if (i < 8) {
+            if (i < count * .8) {
                 rnd2 = Math.floor(Math.random() * names4.length);
                 names = names3[rnd] + names4[rnd2];
             } else {
@@ -23,4 +23,3 @@ function nameGen() {
         print(names);
     }
 }
-nameGen();

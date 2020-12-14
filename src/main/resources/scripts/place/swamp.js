@@ -10,15 +10,13 @@ var nm25 = ["Épi","Auri","Avi","Angou","Hague","Houi","Anti","Anto","Or","Alen"
 var nm26 = ["gnan","gnane","gneux","llac","lles","lliers","llon","lly","nne","nnet","nnois","ppe","ppes","rgues","ssion","ssis","ssonne","ssons","ssy","thune","çon","béliard","bagne","beuge","bonne","ciennes","court","fort","gny","gues","gueux","lès","lême","let","limar","logne","lon","luçon","luire","lun","mans","mart","masse","miers","momble","mont","mur","nau","nesse","nin","noît","rac","rault","ris","roux","sart","seau","sier","sir","teaux","toise","tou","veil","vers","ves","ville","vin","yonne","zieu","zon"];
 var nm30 = [];
 
-var br = "";
-
 function nameGen(type){
 	var tp = type;
 
 	for (i = 0; i < count; i++){
 		if(tp === 1){
 			rnd = Math.random() * nm5.length | 0;
-			if(i < 4){
+			if(i < count * .4){
 				rnd2 = Math.random() * nm6a.length | 0;
 				if(rnd < 6 && rnd2 < 138){
 						names = nm5[rnd] + " " + nm6b[rnd2];
@@ -49,16 +47,16 @@ function nameGen(type){
 			}
 		}else{
 			rnd2 = Math.random() * nm2.length | 0;
-			if(i < 2){
+			if(i < count * .2){
 				rnd1 = Math.random() * nm1.length | 0;
 				names = "The " + nm1[rnd1] + " " + nm2[rnd2];
-			}else if(i < 4){
+			}else if(i < count * .4){
 				rnd1 = Math.random() * nm1.length | 0;
 				names = nm1[rnd1] + " " + nm2[rnd2];
 			}else{
 				rnd3 = Math.random() * nm3.length | 0;
 				rnd4 = Math.random() * nm4.length | 0;
-				if(i < 7){
+				if(i < count  * .7){
 					names = nm3[rnd3] + nm4[rnd4] + " " + nm2[rnd2];
 				}else{
 					names = "The " + nm2[rnd2] + " of " + nm3[rnd3] + nm4[rnd4];
@@ -68,4 +66,3 @@ function nameGen(type){
 		print(names);
 	}
 }
-nameGen();

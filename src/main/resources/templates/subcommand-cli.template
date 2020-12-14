@@ -7,6 +7,7 @@ import picocli.CommandLine.Spec;
 
 import javax.annotation.processing.Generated;
 import javax.script.Bindings;
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -16,9 +17,9 @@ import java.io.FileReader;
 @Generated(date = "{{date}}", value= "{{generator}}", comments = "version = {{version}}")
 @Command(name = "{{name}}", mixinStandardHelpOptions = true)
 public class {{nameCamel}}Cli implements Runnable {
-    @Spec private CommandSpec spec;
-
     @Option(names = "--count") private int count = 10;
+    @Option(names = "--gender") private String gender = "";
+    @Spec private CommandSpec spec;
 
     @Override
     public void run() {
@@ -28,7 +29,23 @@ public class {{nameCamel}}Cli implements Runnable {
         bindings.put("count", count);
         try {
             engine.eval(new FileReader("src/main/resources/scripts/{{type}}/{{name}}.js"), bindings);
-        } catch (ScriptException | FileNotFoundException e) {
+            Invocable invocable = (Invocable) engine;
+            switch (gender) {
+                case "female":
+                    spec.commandLine().getOut().printf("%s FEMALE NAMES%n", count);
+                    invocable.invokeMethod(bindings, "nameGen", 1);
+                    break;
+                case "neutral":
+                    spec.commandLine().getOut().printf("%s NEUTRAL NAMES%n", count);
+                    invocable.invokeMethod(bindings, "nameGen", 2);
+                    break;
+                case "male":
+                    spec.commandLine().getOut().printf("%s MALE NAMES%n", count);
+                default:
+                    invocable.invokeMethod(bindings, "nameGen", 0);
+                    break;
+            }
+        } catch (ScriptException | FileNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
     }

@@ -1,4 +1,7 @@
     @Test
     public void test{{nameCamel}}() {
-        cliTester.execute("{{name}}").success();
+        cliTester.execute("{{name}} --count 3").success();
+        cliTester.execute("{{name}} --count 3 --gender male").success();
+        cliTester.execute("{{name}} --count 3 --gender female").success();
+        cliTester.execute("{{name}} --count 3 --gender neutral").success();
     }

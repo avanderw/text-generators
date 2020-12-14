@@ -54,10 +54,13 @@ public class SubCommandCliGenerator {
             public FileVisitResult preVisitDirectory(final Path dir, final BasicFileAttributes attrs) throws IOException {
                 if (!dir.equals(base)) {
                     type = dir.getName(dir.getNameCount() - 1).toString();
+                    if (type.equals("utility")) {
+                        return FileVisitResult.SKIP_SUBTREE;
+                    }
                     typeCamel = CaseUtils.toCamelCase(type, true, '-');
                     System.out.println(typeCamel);
+                    methodList = new ArrayList<>();
                 }
-                methodList = new ArrayList<>();
                 return super.preVisitDirectory(dir, attrs);
             }
 

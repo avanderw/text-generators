@@ -3,12 +3,12 @@ var nm6a = ["abo", "aes", "ais", "am", "an", "ans", "aon", "aor", "aos", "ar", "
 var nm6b = ["aë", "aëe", "aa", "abe", "ace", "ada", "ae", "aea", "age", "aia", "ais", "ala", "ale", "ana", "ane", "ano", "ape", "ara", "are", "as", "atë", "ate", "ave", "ea", "ebe", "eda", "ede", "ee", "ehe", "eia", "eio", "eis", "ela", "ele", "eme", "ena", "ene", "eos", "era", "ere", "ero", "es", "esa", "eta", "ete", "eto", "ia", "ias", "ica", "ice", "ie", "ike", "iko", "ile", "ilo", "ima", "ime", "imo", "ina", "ine", "ino", "io", "ion", "ir", "ira", "is", "isa", "ita", "ite", "ito", "oë", "obe", "oce", "oda", "ode", "oe", "oea", "ois", "ola", "ole", "ome", "on", "ona", "one", "opa", "ope", "oré", "ora", "ore", "os", "osa", "oto", "uba", "uce", "uge", "ugo", "uia", "us", "usa", "yia", "yke", "yle", "ylo", "yne", "yo", "yra", "yro", "ysa", "yse", "yta"];
 var nm7 = ["h", "m", "n", "r", "s"];
 var nm8 = ["a", "e", "i", "o", "u", "y"];
+
 function nameGen(type) {
     var nm6 = [];
     var tp = type;
-    var br = "";
     for (i = 0; i < count; i++) {
-        if (i < 5) {
+        if (i < count * .5) {
             rnd = Math.random() * nm5.length | 0;
             names = nm5[rnd][1] + " (" + nm5[rnd][2] + ", " + nm5[rnd][0] + ")";
         } else {
@@ -41,7 +41,3 @@ function nameGen(type) {
         print(names);
     }
 }
-nameGen();
-print("=== MALE ===");
-nameGen(1);
-print("=== FEMALE ===");

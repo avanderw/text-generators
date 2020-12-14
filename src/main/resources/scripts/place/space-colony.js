@@ -2,7 +2,6 @@ var nm1 = ["Aegis","Aeon","Aeris","Babylon","Aeternitas","Aether","Alliance","Al
 var nm2 = ["","Colony","Station","Colony","Station","Base","Terminal",""];
 var nm3 = ["","Colonie","Colonie","Station","Station","Base","Terminus","Terminal"];
 var nm4 = ["Éclat","Égide","Élysée","Énigme","Épiphanie","Éternité","Éther","Étranger","Aeon","Aeris","Aeternitas","Aiguille","Alliance","Alpha","Amazone","Ange","Ange Gardien","Anomalie","Apollon","Arcadia","Arcadis","Arche","Architecte","Artemis","Aspodèle","Astérion","Astraeus","Athena","Atlas","Atmos","Aube","Aura","Aurore","Avant-Garde","Avantage","Azura","Azure","Babylone","Baldur","Balise","Berger","Boréales","Céleste","Canaan","Cendre","Chance","Chronos","Clarté","Colonisateur","Connaissance","Coquin","Crainte","Curateur","Curiosité","Début","Découverte","Destin","Dogme","Données","Dune","Empyrée","Erebus","Escorte","Félicité","Fable","Fantôme","Fantasme","Faune","Flèche","Flore","Fortune","Frontière","Génie","Gaia","Galaxie","Gamme","Gardien","Genèse","Gloire","Hélios","Héraut","Héritage","Halo","Hera","Hermès","Horus","Hymne","Hypérion","Hypnose","Illume","Infinité","Insigne","Iris","Janus","Juno","Légende","Liberté","Lumen","Luminosité","Luna","Lune","Lunisolar","Mère","Mémento","Mérite","Magnificence","Magnus","Mammouth","Merveille","Minerva","Miracle","Monstre","Muse","Mystère","Mythe","Nébuleuse","Némésis","Néo","Naissance","Nemo","Nero","Nimbe","Nimbus","Nova","Novis","Nyx","Odyssée","Olympe","Oméga","Oracle","Orbite","Origine","Orphelin","Osiris","Pâtre","Pèlerin","Père","Parabole","Paradoxe","Parangon","Pasteur","Patrimoine","Pedigree","Phénix","Phénomène","Phare","Pionneer","Prisme","Prodige","Prométhée","Prophétie","Protecteur","Proto","Provenance","Rébus","Révélation","Révelátion","Rêvasserie","Rêve","Rêverie","Rayonnement","Reconnaissance","Refuge","Relique","Rune","Sérénité","Saga","Sancus","Scout","Selene","Siècle","Sion","Sol","Solas","Soleil","Songerie","Spectacle","Spectre","Splendeur","Symbole","Terra","Terrarium","Terre","Themis","Tibère","Titan","Torus","Tranquillité","Triomphe","Trivia","Utopie","Valhalla","Vertu","Vesta","Vestale","Vestige","Victoire","Victoria","Visage","Voyage","Voyageur","Vulcain","Yggdrasil","Zeus"];
-var br = "";
 
 function nameGen(type){
 	var tp = type;
@@ -20,4 +19,3 @@ function nameGen(type){
 		print(names);
 	}
 }
-nameGen();
