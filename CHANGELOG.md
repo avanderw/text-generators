@@ -6,6 +6,16 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 See [README](README.md) for more project related information.
 
+## [v2.0.0] (Major release)
+*Released on 2020-12-14*
+
+### Added
+- Add 'afrikaans' name generator
+- Add 'warrior' name generator
+
+### Changed
+- Change the command line to accept gender arguments
+
 ## [v1.0.0] (Feature release)
 *Released on 2020-12-13*
 
