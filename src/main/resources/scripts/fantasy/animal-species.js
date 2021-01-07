@@ -2354,11 +2354,11 @@ var nm3 = [
 
 function nameGen() {
   for (i = 0; i < count; i++) {
-    if (i < 4) {
+    if (i < count * 0.4) {
       rnd = Math.floor(Math.random() * nm1.length);
       rnd2 = Math.floor(Math.random() * nm2.length);
       names = nm1[rnd] + " " + nm2[rnd2];
-    } else if (i < 6) {
+    } else if (i < count * 0.6) {
       rnd = Math.floor(Math.random() * nm3.length);
       rnd2 = Math.floor(Math.random() * nm2.length);
       names = nm3[rnd] + " " + nm2[rnd2];

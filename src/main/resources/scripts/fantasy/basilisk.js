@@ -185,7 +185,7 @@ function nameGen() {
     while (nm5[rnd5] === nm3[rnd3]) {
       rnd5 = (Math.random() * nm5.length) | 0;
     }
-    if (i < 5) {
+    if (i < count * 0.5) {
       names = nm1[rnd] + nm2[rnd2] + nm3[rnd3] + nm2[rnd4] + nm5[rnd5];
       for (j = 0; j < check.length; j++) {
         while (names === check[j]) {
@@ -193,10 +193,10 @@ function nameGen() {
           names = nm1[rnd] + nm2[rnd2] + nm3[rnd3] + nm2[rnd4] + nm5[rnd5];
         }
       }
-    } else if (i < 9) {
+    } else if (i < count * 0.9) {
       rnd6 = (Math.random() * nm4.length) | 0;
       rnd7 = (Math.random() * nm2.length) | 0;
-      if (i < 7) {
+      if (i < count * 0.7) {
         names =
           nm1[rnd] +
           nm2[rnd2] +

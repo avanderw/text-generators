@@ -419,9 +419,9 @@ function nameMas() {
   rnd3 = (Math.random() * nm3.length) | 0;
   rnd4 = (Math.random() * nm2.length) | 0;
   rnd5 = (Math.random() * nm4.length) | 0;
-  if (i < 3) {
+  if (i < count * 0.3) {
     namesTemp = nm1[rnd] + nm2[rnd2] + nm3[rnd3] + nm2[rnd4] + nm4[rnd5];
-  } else if (i < 6) {
+  } else if (i < count * 0.6) {
     rnd8 = (Math.random() * nm3.length) | 0;
     rnd9 = (Math.random() * nm2.length) | 0;
     namesTemp =
