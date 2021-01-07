@@ -2353,7 +2353,7 @@ var nm3 = [
 ];
 
 function nameGen() {
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < count; i++) {
     if (i < 4) {
       rnd = Math.floor(Math.random() * nm1.length);
       rnd2 = Math.floor(Math.random() * nm2.length);
