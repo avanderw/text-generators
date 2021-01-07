@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
+import net.avdw.property.PropertyFile;
 import org.reflections.Reflections;
 import picocli.CommandLine;
 

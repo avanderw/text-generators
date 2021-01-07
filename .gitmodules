@@ -4,3 +4,6 @@
 [submodule "src/main/java/net/avdw/cli"]
 	path = src/main/java/net/avdw/cli
 	url = https://github.com/avanderw/net.avdw.cli.git
+[submodule "src/main/java/net/avdw/property"]
+	path = src/main/java/net/avdw/property
+	url = https://github.com/avanderw/net.avdw.property.git
